@@ -1,18 +1,23 @@
-Docker Alpine Ruby Image
+Docker Alpine PHP CLI Image
 ==================================================
 
-
-This is the smallest possible Ruby docker image, with ability to 
-build native extension gems.
+A PHP CLI based on Alpine.
 
 ```
-# Start IRB
-$ docker run -it --rm dannyben/alpine-ruby
-
-# Show gem environment
-$ docker run --rm dannyben/alpine-ruby gem env
+# Bash into the container and mount the current directory
+$ docker run --rm -it -v$PWD:/app dannyben/alpine-php bash
 ```
 
-[View on Docker Hub][1]
+If you are using the source repository, you can use the provided Runfile for 
+some additional convenience commands.
 
-[1]: https://hub.docker.com/r/dannyben/alpine-ruby/
+```
+$ gem install runfile
+$ run --help
+
+
+- [View on Docker Hub][1]
+- [View on GitHub][2]
+
+[1]: https://hub.docker.com/r/dannyben/alpine-php/
+[2]: https://github.com/DannyBen/docker-alpine-php
