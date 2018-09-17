@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  # docker-compose run php
+  php: &default
+    build: .
+    image: dannyben/alpine-php
+    volumes:
+    - ./app:/app
+
+  # docker-compose run bash
+  bash:
+    <<: *default
+    command: bash
+
+  # docker-compose run test
+  test: 
+    <<: *default
+    command: php test.php

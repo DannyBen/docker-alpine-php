@@ -8,13 +8,10 @@ A PHP CLI based on Alpine.
 $ docker run --rm -it -v$PWD:/app dannyben/alpine-php bash
 ```
 
-If you are using the source repository, you can use the provided Runfile for 
-some additional convenience commands.
+If you are using the source repository, you can use the provided 
+docker-compose for some additional convenience commands.
 
-```
-$ gem install runfile
-$ run --help
-```
+---
 
 - [View on Docker Hub][1]
 - [View on GitHub][2]
